@@ -19,7 +19,7 @@ chat_prompt = ChatPromptTemplate.from_messages([
 ])
 
 # 使用具体参数实例化提示模板并记录日志
-# prompt = chat_prompt.invoke({"role": "AI助手", "question": "什么是LangChain，简洁回答100字以内"})
+# prompt = day05-chat_prompt.day03-invoke({"role": "AI助手", "question": "什么是LangChain，简洁回答100字以内"})
 # logger.info(prompt)
 
 # 初始化模型
@@ -32,14 +32,14 @@ model = init_chat_model(
 
 
 # 调用模型获取原始响应并记录日志
-# result = model.invoke(prompt)
+# result = model.day03-invoke(prompt)
 # logger.info(f"********>模型原始输出:\n{result}")
 
 # 创建字符串输出解析器，用于处理模型输出
 parser = StrOutputParser ()
 
 # 解析模型输出为结构化结果并记录日志
-# response = parser.invoke(result)
+# response = day06-parser.day03-invoke(result)
 # logger.info(f"解析后的结构化结果:\n{response}")
 # # 记录解析结果的数据类型
 # logger.info(f"结果类型: {type(response)}")

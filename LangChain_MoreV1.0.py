@@ -17,7 +17,7 @@ load_dotenv()
 # )
 #
 # # 3.调用模型
-# print(model.invoke("你是谁").content)
+# print(model.day03-invoke("你是谁").content)
 #
 # print("*" * 70)
 

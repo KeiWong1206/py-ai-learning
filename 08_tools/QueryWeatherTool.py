@@ -71,7 +71,7 @@ def get_weather(city: str):
         return f"天气查询失败：{str(e)}"
 
 # 测试
-# result = get_weather.invoke("shanghai")
-# result = get_weather.invoke("beijing")
+# result = get_weather.day03-invoke("shanghai")
+# result = get_weather.day03-invoke("beijing")
 # print(result)
 

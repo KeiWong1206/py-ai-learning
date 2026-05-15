@@ -24,8 +24,8 @@ llm_with_tools = llm.bind_tools([get_weather,get_alert])
 # 创建解析器，用于提取工具调用指令结果中的 JSON 数据，key指定工具名，有可能有多个工具，only，防止多个参数。主要是要得到：'args': {'city': '北京'},
 parser = JsonOutputKeyToolsParser(key_name=get_weather.name, first_tool_only=True)
 
-# print(llm.invoke("你好请问北京天气怎么样").content)
-# res = llm_with_tools.invoke("你好， 请问北京的天气怎么样？")
+# print(llm.day03-invoke("你好请问北京天气怎么样").content)
+# res = llm_with_tools.day03-invoke("你好， 请问北京的天气怎么样？")
 # print(res.tool_calls)
 # print(res)
 '''

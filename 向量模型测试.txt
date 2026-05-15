@@ -1,0 +1,17 @@
+//向量切割 测试txt文件
+
+A cat and a rat.
+A rat and a cat.
+An elephant and a tiger.
+
+The cat has a rat.
+The rat ran at Ann.
+Ann has a cat.
+The cat ran at the rat.
+A man has a banana.
+The man ran at a baby elephant, the baby elephant ran at his mom.
+A tiger ran at the man.
+
+
+
+
