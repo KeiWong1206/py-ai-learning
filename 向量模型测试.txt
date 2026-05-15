@@ -2,15 +2,72 @@
 
 A cat and a rat.
 A rat and a cat.
-An elephant and a tiger.
 
+An elephant and a tiger.
+-------------------------------------------------------
 The cat has a rat.
 The rat ran at Ann.
 Ann has a cat.
 The cat ran at the rat.
+
 A man has a banana.
 The man ran at a baby elephant, the baby elephant ran at his mom.
 A tiger ran at the man.
+--------------------------------------------------------
+Ann and Nat.
+Ann has a fan.
+Nat has a hat.
+Ann can fan Nat.
+
+Ann fans Nat.
+The yard has a spring.
+A frog and a snake
+They are by the spring.
+The frog has legs.
+it can spring.
+The snake has no legs.
+it can not spring.
+-----------------------------------------------------------
+A man and a lad.
+The man sat; the lad ran.
+The man sat, and the lad ran.
+The man has a hat.
+The lad has cap.
+
+A dog and a cat.
+The dog stood and the cat lay.
+The dog has a ring around its neck,but the cat doesn't.
+------------------------------------------------------------
+The cat and the rat ran.
+Ann sat, and Nat ran.
+A rat ran at Ann.
+Can Ann fan the lad?
+The man and the lad.
+The man has a cap.
+The lad has a fan.
+Has Ann a hat?
+Ann has a hat and a fan.
+
+Has a frog legs?
+has a snake legs?
+Dose the frog have legs?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

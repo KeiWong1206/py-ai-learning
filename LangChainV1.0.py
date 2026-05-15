@@ -23,6 +23,7 @@ print(model.invoke("你是谁").content)
 print("*" * 50)
 
 
+
 #通过 python-dotenv 库读取 env 文件中的环境变量，并加载到当前运行的环境中
 load_dotenv(encoding='utf-8')
 model2 = init_chat_model(

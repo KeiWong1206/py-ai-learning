@@ -38,3 +38,4 @@ model = init_chat_model(
 # 5.调用模型v2
 print(model.__dict__)
 print(model.invoke("你是谁").content)
+
