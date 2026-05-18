@@ -21,7 +21,7 @@ llm = init_chat_model(
 # 将模型与工具绑定，使其能够调用 get_weather 工具
 llm_with_tools = llm.bind_tools([get_weather,get_alert])
 
-# 创建解析器，用于提取工具调用指令结果中的 JSON 数据，key指定工具名，有可能有多个工具，only，防止多个参数。主要是要得到：'args': {'city': '北京'},
+# 创建解析器，用于提取大模型返回的 工具调用指令结果中的 JSON 数据，key指定工具名，有可能有多个工具，only，防止多个参数。主要是要得到：'args': {'city': '北京'},
 parser = JsonOutputKeyToolsParser(key_name=get_weather.name, first_tool_only=True)
 
 # print(llm.day03-invoke("你好请问北京天气怎么样").content)
@@ -49,7 +49,7 @@ None, 'reasoning_tokens': 43, 'rejected_prediction_tokens': None, 'text_tokens':
 # get_weather_chain = llm_with_tools | get_weather # 这样不行，无法解析调用工具指令
 
 
-get_weather_chain = llm_with_tools | parser | get_weather
+get_weather_chain = llm_with_tools | parser | get_weather #请求大模型，大模型返回调用工具参数，调用工具获取结果
 print(get_weather_chain.invoke("你好， 请问北京的天气怎么样？")) #这里成功返回tool的原始json数据：
 '''
 {
@@ -79,7 +79,8 @@ output_parser = StrOutputParser()
 output_chain = output_prompt | llm | output_parser #output接收上面返回的json数据，放{「weather_json:xx}(构建参数)当中
 #
 # # 构建完整的处理链：天气查询链 ->将天气数据包装为字典格式 -> 输出链
-full_chain = get_weather_chain | (lambda x: {"weather_json": x}) | output_chain
+full_chain = get_weather_chain | (lambda x: {"weather_json": x}) | output_chain #把调用工具的返回结果，封装为字典参数传入
+#新的prompt，然后执行后面的链。
 #
 #这里还没后引入agent，所以是先使用get_weather_chain ，传入问题"请问北京今天的天气如何？"，
 # #然后大模型识别问题，还有tool工具，返回调用调用工具的json格式，langchain执行调用返回结果给parser进行解析

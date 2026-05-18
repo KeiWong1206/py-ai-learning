@@ -39,3 +39,4 @@ model = init_chat_model(
 print(model.__dict__)
 print(model.invoke("你是谁").content)
 
+

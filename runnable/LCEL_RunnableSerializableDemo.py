@@ -44,7 +44,7 @@ chain2 = prompt2 | model | parser2
 
 
 # 组合成一个复合 Chain，使用 lambda 函数将chain1执行结果content内容添加input键作为参数传递给chain2
-full_chain = chain1 | (lambda content: {"input": content}) | chain2
+full_chain = chain1 | (lambda content: {"input": content}) | chain2  #人为构建字典类型，然后传入新的链的prompt。
 
 # 调用复合链
 result = full_chain.invoke({"topic": "langchain"})

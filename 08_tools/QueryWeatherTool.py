@@ -66,7 +66,7 @@ def get_weather(city: str):
             "湿度(%)": current["humidity"]
         }
 
-        return json.dumps(result, ensure_ascii=False, indent=2)
+        return json.dumps(result, ensure_ascii=False, indent=2) #主要用于将 Python 的字典对象 result 转换为 JSON 格式的字符串
     except Exception as e:
         return f"天气查询失败：{str(e)}"
 

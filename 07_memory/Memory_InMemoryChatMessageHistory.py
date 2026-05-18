@@ -15,7 +15,7 @@ llm = init_chat_model(
 # 创建内存聊天历史记录实例，用于存储对话消息
 history = InMemoryChatMessageHistory()
 
-# 添加用户消息到聊天历史记录
+# 手动 添加用户消息到聊天历史记录
 history.add_user_message("我叫张三，我的爱好是学习")
 
 # 调用语言模型处理聊天历史中的消息
@@ -24,7 +24,7 @@ ai_message = llm.invoke(history.messages)  #每次都把history传进去。
 # 记录并输出AI回复的内容
 logger.info(f"第一次回答\n{ai_message.content}")
 
-# 将AI回复添加到聊天历史记录中
+# 手动 将AI回复添加到聊天历史记录中
 history.add_message(ai_message)
 
 # 添加新的用户消息到聊天历史记录

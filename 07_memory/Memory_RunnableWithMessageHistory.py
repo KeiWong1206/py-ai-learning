@@ -35,7 +35,7 @@ history = InMemoryChatMessageHistory()
 # 创建带消息历史的可运行对象，用于处理带历史记录的对话
 runnable = RunnableWithMessageHistory(
     chain,
-    get_session_history=lambda session_id: history,
+    get_session_history=lambda session_id: history,  #都是同一个history对象
     input_messages_key="input",  # 指定输入键。
     history_messages_key="history"  # 指定历史消息键。 告诉langchain 提示词模版中的历史对话站位key是history，把从内
     #内存中读取到的历史消息，填充到history站位符哪里就可以。
